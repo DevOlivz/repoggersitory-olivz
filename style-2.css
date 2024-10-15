@@ -1,0 +1,60 @@
+:root {
+    --black: #0e2924;
+    --cyan: #1e4e45;
+    --green: #74f18f;
+    --pink: #ff007f;
+    --bg-black: #e7e7e7;
+    --white: #ffffff;
+}
+
+body {
+    background-color: var(--bg-black);
+    color: var(--cyan);
+    font-family: 'Courier New', monospace;
+    text-align: center;
+    min-height: 100vh;
+    margin: 0;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+color {
+    color: white;
+}
+
+.cartao-resposta {
+    display: none;
+}
+
+.front p {
+    padding-right: 2.5rem;
+
+}
+
+.front h3 {
+    padding-right: 3rem;
+}
+
+.content {
+    background-color: var(--cyan);
+    color: var(--white);
+    border-radius: 5px;
+    padding: 1rem;
+    margin: 1.75rem 3rem;
+    box-shadow: 5px 5px 15px 3px var(--green);
+}
+
+.answer {
+    background-color: var(--green);
+    width: 50%;
+    color: var(--cyan);
+    font-weight: bold;
+    border-radius: 5px;
+    margin: auto;
+}
+
+footer {
+    min-height: 50px;
+    background-color: var(--glass-cyan);
+    padding: .25rem;
+}

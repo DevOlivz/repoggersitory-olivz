@@ -21,6 +21,11 @@ color {
     color: white;
 }
 
+.flashcard.is-flipped .flip {
+    transform: rotateY(180deg);
+}
+
+
 header {
     min-height: 50px;
 }
@@ -47,16 +52,6 @@ h1 {
     background: rgba(255, 0, 255, 0.2);
 }
 
-.flashcard:hover .flip {
-    transform: scale(1.05);
-    transform: rotateY(180deg);
-    
-
-.front {
-    opacity: 0;
-}
-}
-
 .flip {
     background: rgba(255, 0, 255, 0.1);
     border: 2px solid var(--punk-cyan);
@@ -75,14 +70,19 @@ h1 {
 }
 
 .back p, .back h2 {
-    padding-left: 1.80rem;
+    padding-left: 2.25rem;
 
 }
 
-.front p, .front h2 {
-    padding-right: 1.5rem;
+.front p {
+    padding-right: 2.5rem;
 
 }
+
+.front h3 {
+    padding-right: 3rem;
+}
+
 
 .front, .back{
     position: absolute;

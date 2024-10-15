@@ -1,9 +1,11 @@
+
+
 function criaCartao (emote, categoria, pergunta, resposta){
     let container = document.getElementById('container');
     let cartao = document.createElement('article');
     cartao.className = 'cartao';
     cartao.innerHTML = `    
-    <div class="cartao-conteudo flashcard">
+    <div class="content flashcard" onclick="showAnswer(this)">
     <div class="flip">
         <div class="front">
             <h3>${emote} ${categoria}</h3>
@@ -19,11 +21,16 @@ function criaCartao (emote, categoria, pergunta, resposta){
     </div>
 </div>
     `
- document.querySelectorAll('.flashcard').forEach(card => {
-        card.addEventListener('click', () => {
-            card.classList.toggle('is-flipped');
-        });
-    });
 
     container.appendChild(cartao)
 }       
+
+function showAnswer(card) {
+    const answer = card.querySelector('.cartao-resposta')
+    if(answer.style.display === 'none'){
+        answer.style.display = 'block'
+    }
+    else {
+        answer.style.display = 'none'
+    }
+}
